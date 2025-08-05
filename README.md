@@ -32,7 +32,7 @@ Este projeto foi desenvolvido para ser um bot de auxílio a atendentes de suport
 ## 📁 Estrutura do Projeto
 
 A estrutura de pastas e arquivos principais do projeto é a seguinte:
-
+```
 ├── backend/
 │   ├── pycache/
 │   ├── init.py         # Inicializador do módulo backend
@@ -49,7 +49,7 @@ A estrutura de pastas e arquivos principais do projeto é a seguinte:
 ├── freshRequests.py        # Script para fazer requisições à base de conhecimento
 ├── requirements.txt        # Lista de dependências do projeto
 └── run.py                  # (Opcional) Script para iniciar a aplicação
-
+```
 ## 🚀 Instalação e Configuração
 
 Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
@@ -61,9 +61,9 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 ### 2. Clonar o Repositório
 
-git clone <URL_DO_SEU_REPOSITORIO>
-cd <NOME_DA_PASTA_DO_PROJETO>
-
+```
+git clone https://github.com/raulblummertz/AgenteN2Virtual.git cd <NOME_DA_PASTA_DO_PROJETO>
+```
 ### 3. Configurar Ambiente Virtual e Dependências
 Crie e ative um ambiente virtual:
 
@@ -83,31 +83,31 @@ pip install -r requirements.txt
 
 Crie um arquivo .env na raiz do projeto e adicione as variáveis de ambiente necessárias:
 
-OPENAI_API_KEY=seu_chave_api_openai
+```OPENAI_API_KEY=seu_chave_api_openai
 DISCORD_TOKEN=seu_token_do_discord
 PINECONE_API_KEY=seu_chave_api_pinecone
 PINECONE_ENVIRONMENT=seu_ambiente_pinecone
 PINECONE_INDEX_NAME=seu_nome_do_indice_pinecone
 FRESHDESK_API_KEY=seu_chave_api_freshdesk
 FRESHDESK_DOMAIN=seu_dominio_freshdesk
-
+```
 ## ▶️ Como Usar
 Para colocar o sistema em funcionamento, você precisa executar os scripts na ordem correta.
 
 ### 1. Popular o Banco de Dados (Executar apenas uma vez)
 Primeiro, execute o script para extrair os dados e popular seu banco de dados vetorizado no Pinecone.
 
-python freshRequests.py
+```python freshRequests.py```
 
 ### 2. Iniciar o Servidor da API
 Em um terminal, inicie o servidor local que gerencia as requisições do backend.
 
-uvicorn backend.main:app --reload
+```uvicorn backend.main:app --reload```
 
 
 ### 3. Iniciar o Bot do Discord
 Em outro terminal, com o ambiente virtual ativado, inicie o bot que irá interagir no Discord.
 
-python bot.py
+```python bot.py```
 
 Após esses passos, o bot deverá estar online no seu servidor do Discord e pronto para responder às perguntas.

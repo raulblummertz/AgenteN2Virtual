@@ -32,7 +32,7 @@ Este projeto foi desenvolvido para ser um bot de auxílio a atendentes de suport
 ## 📁 Estrutura do Projeto
 
 A estrutura de pastas e arquivos principais do projeto é a seguinte:
-.
+
 ├── backend/
 │   ├── pycache/
 │   ├── init.py         # Inicializador do módulo backend

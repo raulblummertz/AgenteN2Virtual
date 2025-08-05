@@ -1,0 +1,9 @@
+pinecone-client
+python-dotenv
+requests
+langchain
+uvicorn
+discord.py
+openai
+fastapi
+pydantic

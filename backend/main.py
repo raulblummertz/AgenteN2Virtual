@@ -1,4 +1,8 @@
 import logging
+from fastapi import FastAPI
+from pydantic import BaseModel
+from .query_processor import QueryProcessor
+
 
 logging.basicConfig(
     level=logging.INFO,  
@@ -9,9 +13,6 @@ logging.basicConfig(
     ]
 )
 
-from fastapi import FastAPI
-from pydantic import BaseModel
-from .query_processor import QueryProcessor
 
 app = FastAPI()
 processor = QueryProcessor()
